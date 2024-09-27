@@ -14,7 +14,8 @@ public class Rotor {
     
     public boolean rotate(){
         //TODO
-               
+        this.rotorValues = this.rotorValues.substring(1) + this.rotorValues.charAt(0); // this rotates the screen by moving the first character to the end
+        return this.rotorValues.charAt(0) == this.startChar; // this returns that the value would be true if the first character mathcing the the first starting character basically this code removes the first character and adds it to the end of the string          
     }
     
 
