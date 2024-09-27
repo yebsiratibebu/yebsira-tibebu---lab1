@@ -27,6 +27,9 @@ public class Enigma{
     
     public String encrypt(String message){
         //TODO
+        for (int i = 0; i < message.length(); i++) { // loop through every charater in message
+        
+        }
 
     
     private void rotate(){

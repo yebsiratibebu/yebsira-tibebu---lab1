@@ -21,10 +21,12 @@ public class Rotor {
 
     public int indexOf(char c){
         //TODO
+        return this.rotorValues.indexOf(c); // this returns the index character c in rotor values.
     }
 
     public char charAt(int idx){
         //TODO
+        return this.rotorValues.charAt(idx); // this returns the character at the given index called inx
     }
 }
     
