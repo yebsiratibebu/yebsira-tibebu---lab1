@@ -18,37 +18,41 @@ public class Enigma{
         
     }
 
-
+    //outer -> middle (same space)
+    //middle -> outer (same letter)
+    //outer -> inner (same space)
     public String decrypt(String message){        
         //TODO
         String decrypt = ""; // initializes an empty stirng to hold the decrypted message
-        for (int i = 0; i < message.length(); i++) {
-            char character = message.charAt(i);
-            int inx = rotors[2].indexOf(character);
-            character = rotors[1].charAt(inx);
-            inx = rotors[2].indexOf(character);
-            character = rotors[0].charAt(inx); 
-            decrypt = decrypt + character;
-            rotate();
+        for (int i = 0; i < message.length(); i++) { // loop through every character in message
+            char character = message.charAt(i); // we find the character at index i
+            int inx = rotors[2].indexOf(character); // this finds the specific character and the index from the outer circular array
+            character = rotors[1].charAt(inx); // use the index to find the correspondinf character in the middle rotor
+            inx = rotors[2].indexOf(character); // finds the index of the new character in the outer rotor
+            character = rotors[0].charAt(inx);  // uses the index to find the correspoiding character in the inner rotor
+            decrypt = decrypt + character; // this then appends the found character at the end into the empty string
+            rotate(); // this rotates the circular array after each character is found
         }
-        return decrypt;
+        return decrypt; // returns the decrypted character
     }
 
 
-    
+    // inner -> outer (same space)
+    // outer -> middle (same letter)
+    //middle -> outer (same space)
     public String encrypt(String message){
         //TODO
         String encrypt = ""; // initializes an empty strinf to hold the encrypted message
         for (int i = 0; i < message.length(); i++) { // loop through every charater in message
-            char character = message.charAt(i);
+            char character = message.charAt(i); // we find the character at index i
             int inx = rotors[0].indexOf(character); // this find the specific character and the index from the the inner circular array
             character = rotors[2].charAt(inx); // use the index to find the corresponding character in the outer roto
-            inx = rotors[1].indexOf(character); // find the index of the outer rotor
-            character = rotors[2].charAt(inx); //this correcspond the middle index with the outer
-            encrypt = encrypt + character; // this puts the found character at the end into the empty string
+            inx = rotors[1].indexOf(character); // find the index of the new character in the middle rotor
+            character = rotors[2].charAt(inx); //uses the index to find the corresponding character in the outer roto
+            encrypt = encrypt + character; // this the appends the found character at the end into the empty string
             rotate(); // this rotates the circular array after each character is found
         }
-        return encrypt;
+        return encrypt; // returns the encrypted character
     }
     
     private void rotate(){

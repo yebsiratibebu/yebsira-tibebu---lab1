@@ -15,7 +15,7 @@ public class Rotor {
     public boolean rotate(){
         //TODO
         this.rotorValues = rotorValues.charAt(rotorValues.length() - 1) + rotorValues.substring(0 , rotorValues.length() - 1); // this rotates the screen by moving the first character to the end
-        if (rotorValues.charAt(0) == startChar) {
+        if (rotorValues.charAt(0) == startChar) { // if the starting character is equal to the first index which is 0 then return true else return false
             return true;
         }
         return false;
