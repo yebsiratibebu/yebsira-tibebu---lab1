@@ -1,0 +1,47 @@
+commit 8d252ef7cc46c84d0e72d46ce9720d70026854bc
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Sep 29 14:15:59 2024 -0400
+
+    MY final commit
+
+commit 9740aef9e2f017e1390cb93f1b810ac560261896
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Sep 29 14:00:28 2024 -0400
+
+    My sixth draft
+
+commit cdd382795d5cfcc0d1a8c41c96fed6276abadc91
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sat Sep 28 21:39:44 2024 -0400
+
+    My fifth draft
+
+commit b625afd5bc0a2ba315f604d089dfac574932db6c
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sat Sep 28 19:40:50 2024 -0400
+
+    My fourth commit
+
+commit a0ceaa35bd24f4eda8a209ebf6566677c8396c83
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Fri Sep 27 18:52:23 2024 -0400
+
+    My third draft
+
+commit 206397767cdc69ba79a24d2e141ba8d201f3c04c
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Fri Sep 27 18:38:51 2024 -0400
+
+    My second draft
+
+commit bd5af040132317ddca1527b77157294fb10612d2
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Mon Sep 23 14:51:44 2024 -0400
+
+    My first draft
+
+commit eccb5e132e797a7df202100328bfcf3e194d9283
+Author: yebsiratibebu <yebsira.tibebu@gwmail.gwu.edu>
+Date:   Mon Sep 23 14:42:52 2024 -0400
+
+    Add files via upload
