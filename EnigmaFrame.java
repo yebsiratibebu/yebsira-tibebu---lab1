@@ -28,7 +28,7 @@ public class EnigmaFrame extends JFrame{
         Initialpos = new JTextField("EST");
         input = new JTextArea(10,20);
         output = new JTextArea(10,20);
-       
+    
 
         JPanel dpanel = new JPanel(new FlowLayout()); 
         dpanel.add (new JLabel("Inner"));
@@ -46,9 +46,13 @@ public class EnigmaFrame extends JFrame{
         dpanel.add(Decrypt);
 
 
-        JPanel TextPanel = new JPanel(new GridLayout(2,1,10,10));
+        JPanel TextPanel = new JPanel(new GridLayout());
         TextPanel.add(new JLabel("Input", JLabel.LEFT), BorderLayout.NORTH);
         TextPanel.add(new JLabel("Output", JLabel.LEFT), BorderLayout.SOUTH);
+        JPanel textareapanel = new JPanel (new GridLayout(2,1));
+        textareapanel.add(input);
+        textareapanel.add(output);
+        TextPanel.add(textareapanel, BorderLayout.CENTER);
 
         // Add everything to the frame
         f.add(dpanel, BorderLayout.NORTH);
