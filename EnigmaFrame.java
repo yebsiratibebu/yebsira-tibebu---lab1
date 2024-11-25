@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class EnigmaFrame extends JFrame{
     private JTextField Initialpos;
@@ -26,8 +27,10 @@ public class EnigmaFrame extends JFrame{
         middle   = new JComboBox<String>(rotornums);
         out = new JComboBox<String>(rotornums); 
         Initialpos = new JTextField("EST");
-        input = new JTextArea(10,20);
-        output = new JTextArea(10,20);
+        input = new JTextArea(5,60);
+        add(input);
+        output = new JTextArea(5,60);
+        add(output);
     
 
         JPanel dpanel = new JPanel(new FlowLayout()); 
@@ -46,17 +49,30 @@ public class EnigmaFrame extends JFrame{
         dpanel.add(Decrypt);
 
 
-        JPanel TextPanel = new JPanel(new GridLayout());
-        TextPanel.add(new JLabel("Input", JLabel.LEFT), BorderLayout.NORTH);
-        TextPanel.add(new JLabel("Output", JLabel.LEFT), BorderLayout.SOUTH);
-        JPanel textareapanel = new JPanel (new GridLayout(2,1));
-        textareapanel.add(input);
-        textareapanel.add(output);
-        TextPanel.add(textareapanel, BorderLayout.CENTER);
+
+        JPanel TextPanelin = new JPanel(new FlowLayout());
+        TextPanelin.add(new JLabel("Input", JLabel.LEFT), BorderLayout.NORTH);
+        TextPanelin.add(input);
+
+
+        JPanel TextPanelout = new JPanel(new FlowLayout());
+        TextPanelout.add(new JLabel("Output", JLabel.LEFT), BorderLayout.SOUTH);
+        TextPanelout.add(output);
+
+        JPanel TextPanel = new JPanel(new GridLayout(2,2));
+        TextPanel.add(TextPanelin);
+        TextPanel.add(TextPanelout);
 
         // Add everything to the frame
         f.add(dpanel, BorderLayout.NORTH);
-        f.add(TextPanel, BorderLayout.CENTER);
+        f.add(TextPanel, BorderLayout.WEST);
+        
+
+       encryptdecrypt a = new encryptdecrypt();
+       Decrypt.addActionListener();
+
+            
+        
 
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);  
