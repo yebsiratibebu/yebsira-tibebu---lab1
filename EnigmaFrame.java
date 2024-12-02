@@ -13,26 +13,25 @@ public class EnigmaFrame extends JFrame{
     private JTextArea output;
 
     private final String[] rotornums = {
-        "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+        "1", "2", "3", "4", "5"
     };
       public EnigmaFrame() {
-        super();
-        JFrame f = new JFrame();
-        f.setTitle("Enigma GUI");
-        f.setSize(300, 400);
-        f.setLocation(100, 100);
-        f.setLayout(new BorderLayout());
+   
+   
+        this.setTitle("Enigma GUI");
+        this.setSize(300, 400);
+        this.setLocation(100, 100);
+        this.setLayout(new BorderLayout());
 
         inner = new JComboBox<String>(rotornums); 
         middle   = new JComboBox<String>(rotornums);
         out = new JComboBox<String>(rotornums); 
-        Initialpos = new JTextField("EST");
+        Initialpos = new JTextField(5);
         input = new JTextArea(5,60);
-        add(input);
+        input.setEditable(true); 
         output = new JTextArea(5,60);
-        add(output);
-    
-
+        output.setEditable(false); 
+        
         JPanel dpanel = new JPanel(new FlowLayout()); 
         dpanel.add (new JLabel("Inner"));
         dpanel.add(inner);
@@ -49,7 +48,6 @@ public class EnigmaFrame extends JFrame{
         dpanel.add(Decrypt);
 
 
-
         JPanel TextPanelin = new JPanel(new FlowLayout());
         TextPanelin.add(new JLabel("Input", JLabel.LEFT), BorderLayout.NORTH);
         TextPanelin.add(input);
@@ -64,17 +62,60 @@ public class EnigmaFrame extends JFrame{
         TextPanel.add(TextPanelout);
 
         // Add everything to the frame
-        f.add(dpanel, BorderLayout.NORTH);
-        f.add(TextPanel, BorderLayout.WEST);
-        
+        this.add(dpanel, BorderLayout.NORTH);
+        this.add(TextPanel, BorderLayout.WEST);
 
-       encryptdecrypt a = new encryptdecrypt();
-       Decrypt.addActionListener();
-
+           //did the actionlistner based on a youtube video tutorial i watched
+        Encrypt.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+           
+               int rotor0 =  inner.getSelectedIndex();
+               int rotor1 =  middle.getSelectedIndex();
+               int rotor2 =  out.getSelectedIndex();
+  
+  
+               String pos = Initialpos.getText();
+               String inputtxt = input.getText();
             
-        
+             
+               Enigma enigma = new Enigma(rotor0+1, rotor1+1, rotor2+1, pos);
+               String encrypttxt = enigma.encrypt(inputtxt);
+           
 
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setVisible(true);  
+               output.setText(encrypttxt);
+              
+            }
+          
+           });
+           //did the actionlistner based on a youtube video tutorial i watched
+       Decrypt.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // TODO Auto-generated method stub
+           int rotor0 = inner.getSelectedIndex();
+           int rotor1 = middle.getSelectedIndex();
+           int rotor2 = out.getSelectedIndex();
+           String pos = Initialpos.getText();
+           String inputtxt = input.getText();
+        
+           Enigma enigma = new Enigma(rotor0 +1, rotor1+1, rotor2+1, pos);
+           String decrypttxt = enigma.decrypt(inputtxt);
+           output.setText(decrypttxt);
+        }
+      
+       });
+ 
+        this.pack();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);  
     }
+    public static void main(String[] args) {
+        
+        EnigmaFrame u = new EnigmaFrame();
+        u.setVisible(true);
+        
+     }
+
 }

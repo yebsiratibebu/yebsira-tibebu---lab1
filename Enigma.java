@@ -18,11 +18,14 @@ public class Enigma{
         
     }
 
+ 
+
     //outer -> middle (same space)
     //middle -> outer (same letter)
     //outer -> inner (same space)
     public String decrypt(String message){        
         //TODO
+        System.out.println("Decrypting message: " + message); 
         String decrypt = ""; // initializes an empty stirng to hold the decrypted message
         for (int i = 0; i < message.length(); i++) { // loop through every character in message
             char character = message.charAt(i); // we find the character at index i
@@ -33,6 +36,7 @@ public class Enigma{
             decrypt = decrypt + character; // this then appends the found character at the end into the empty string
             rotate(); // this rotates the circular array after each character is found
         }
+        System.out.println("Decrypted result: " + decrypt); 
         return decrypt; // returns the decrypted character
     }
 

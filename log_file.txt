@@ -1,3 +1,33 @@
+commit e72d8ad6d5b59b575edd65fb105f566f61509775
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Nov 24 21:41:11 2024 -0600
+
+    I got all the layout to look similar to the given exmaple screen shot and now i will work on action listenter so that it can generate input/output
+
+commit 2acbe11a80bbb68fd933c6369cbea9e8650d792e
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Nov 24 19:52:04 2024 -0600
+
+    when i run the java i couldnt get the testbox area for input and output for some reason so I created a panel that labels the input and output  to the left side at the top and bottom (norht and south) and i createed another panel for the text area layout i havent run it yet but i am about to
+
+commit 623d757c0961deba9b1a9340870a946997d71e85
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Nov 24 19:38:01 2024 -0600
+
+    was working on the enigma frame file and I kept on getting different gui implementation and now i aligned all the top ones together but im left with the text area for the input and output
+
+commit b3bafa13a722a3e08f5e054642cd47ce45d7ef2f
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Sun Nov 24 16:48:52 2024 -0600
+
+    finished implementing the EnigmaGUI file after looking over the GUI lecture notes
+
+commit 21d687b1651d6eb76a4cfa1344c21f0b3e77d145
+Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
+Date:   Mon Nov 18 14:31:46 2024 -0500
+
+    added the additional files for lab 4 in lab
+
 commit 8d252ef7cc46c84d0e72d46ce9720d70026854bc
 Author: Yebsira Tibebu <yebsiratibebu@Yebsiras-MacBook-Air.local>
 Date:   Sun Sep 29 14:15:59 2024 -0400
